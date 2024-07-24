@@ -5,9 +5,13 @@ import 'package:flutter/material.dart';
 
 import 'homescreen.dart';
 
+
 void main() {
   runApp(const MyApp()
- 
+      // DevicePreview(
+      //   enabled: !kReleaseMode,
+      //   builder: (context) => const MyApp(), // Wrap your app
+      // ),
       );
 }
 
@@ -16,8 +20,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
-    );
+    return MaterialApp(home: HomeScreen(),);
   }
 }
