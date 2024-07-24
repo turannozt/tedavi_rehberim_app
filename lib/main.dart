@@ -1,6 +1,3 @@
-import 'package:device_preview/device_preview.dart';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'constants/constants.dart';
@@ -24,11 +21,11 @@ class MyApp extends StatelessWidget {
       designSize: const Size(411, 823),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (child, context) => MaterialApp(
+      builder: (child, context) => const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Tedavi Rehberim',
         //theme: AppTheme.appTheme,
-        home: const HomeScreen(),
+        home: HomeScreen(),
       ),
     );
   }

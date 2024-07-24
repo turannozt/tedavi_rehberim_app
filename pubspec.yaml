@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   device_preview: ^1.2.0
   flutter_screenutil: ^5.9.3
+  google_generative_ai:
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:

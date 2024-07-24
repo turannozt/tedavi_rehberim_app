@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
@@ -15,16 +14,17 @@ class CustomTextBox extends StatelessWidget {
       keyboardAppearance: Brightness.dark,
       style: const TextStyle(color: AppColors.black),
       decoration: InputDecoration(
+        enabled: false,
         suffixIcon: const Icon(
-          Icons.search,
-          color: AppColors.black,
+          Icons.ads_click,
+          color: AppColors.white,
         ),
         hintText: AppText.searchDoctor,
         hintStyle: Theme.of(context)
             .textTheme
             .headlineSmall!
-            .copyWith(color: AppColors.textGrey),
-        fillColor: AppColors.grey,
+            .copyWith(color: AppColors.white),
+        fillColor: AppColors.red,
         filled: true,
         border: OutlineInputBorder(
           borderSide: BorderSide.none,

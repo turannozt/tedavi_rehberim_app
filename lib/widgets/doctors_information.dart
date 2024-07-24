@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,9 +9,9 @@ import '../screens/doctor_screen.dart';
 class DoctorInformation extends StatelessWidget {
   final List<DoctorInformationModel> doctorInformations;
   const DoctorInformation({
-    Key? key,
+    super.key,
     required this.doctorInformations,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -65,15 +64,13 @@ class DoctorInformation extends StatelessWidget {
                               children: [
                                 Text(
                                   doctorInformations[index].title,
-                                  style: Theme.of(context).textTheme.headlineMedium,
+                                  style: const TextStyle(fontSize: 24),
                                 ),
                                 Row(
                                   children: [
                                     Text.rich(
                                       TextSpan(
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineSmall,
+                                        style: const TextStyle(fontSize: 14),
                                         children: [
                                           TextSpan(
                                               text: doctorInformations[index]
@@ -93,8 +90,8 @@ class DoctorInformation extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: List.generate(
                                 5,
-                                (index) => Row(
-                                  children: const [
+                                (index) => const Row(
+                                  children: [
                                     Icon(
                                       Icons.star_rounded,
                                       color: AppColors.yellow,

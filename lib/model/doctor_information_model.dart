@@ -5,8 +5,10 @@ class DoctorInformationModel {
   final String specialist;
   final String hospital;
   final String star;
+  final String description;
 
   DoctorInformationModel({
+    required this.description,
     required this.id,
     required this.image,
     required this.title,

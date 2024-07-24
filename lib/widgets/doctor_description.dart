@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tedavi_rehberim/chatgpt/chatgpt.dart';
 import 'package:tedavi_rehberim/model/model.dart';
 
 import '../constants/colors.dart';
@@ -43,10 +43,9 @@ class DoctorDescription extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20.h),
-          Text(
-              '${doctorInformationModel.title} is one of the best doctors in the ${doctorInformationModel.hospital}. He has saved more than 1000 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. '),
+          Text('${doctorInformationModel.description}'),
           SizedBox(height: 20.h),
-          const DoctorDetails(),
+          // const DoctorDetails(),
           SizedBox(height: 20.h),
           Row(
             children: [
@@ -64,19 +63,29 @@ class DoctorDescription extends StatelessWidget {
               ),
               SizedBox(width: 20.h),
               Expanded(
-                child: Container(
-                  height: 56,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: AppColors.green,
-                  ),
-                  child: Center(
-                    child: Text(
-                      AppText.makeAppointment,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineSmall!
-                          .copyWith(color: AppColors.white),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChatScreen(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 56,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: AppColors.green,
+                    ),
+                    child: Center(
+                      child: Text(
+                        AppText.makeAppointment,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(color: AppColors.white),
+                      ),
                     ),
                   ),
                 ),

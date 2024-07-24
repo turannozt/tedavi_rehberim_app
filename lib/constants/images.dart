@@ -5,10 +5,10 @@ class AppImages {
   static const String profile = "assets/images/profile.jpg";
 
   //Doctor pics
-  static const String doctor1 = "assets/images/doctor1.png";
-  static const String doctor2 = "assets/images/doctor2.png";
-  static const String doctor3 = "assets/images/doctor3.png";
-  static const String doctor4 = "assets/images/doctor4.png";
+  static const String doctor1 = "assets/images/kalp.png";
+  static const String doctor2 = "assets/images/goz.png";
+  static const String doctor3 = "assets/images/kulak.png";
+  static const String doctor4 = "assets/images/deri.png";
 
   //Icons
   static const String backarrow = "assets/icons/backarrow.png";

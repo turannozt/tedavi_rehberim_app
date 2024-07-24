@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:tedavi_rehberim/model/medical_services_model.dart';
 
@@ -39,7 +38,7 @@ class MedicalServices extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 medicalServices[index].title,
-                style: Theme.of(context).textTheme.titleLarge,
+                style: const TextStyle(fontSize: 15),
               ),
             ],
           );

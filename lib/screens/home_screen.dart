@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tedavi_rehberim/chatgpt/chatgpt.dart';
 import 'package:tedavi_rehberim/constants/constants.dart';
-
-import '../constants/colors.dart';
 import '../data/doctor_information_data.dart';
 import '../data/medical_services_data.dart';
 import '../model/doctor_information_model.dart';
@@ -41,9 +40,17 @@ class HomeScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.displayLarge,
                 ),
                 SizedBox(height: 20.h),
-                const CustomTextBox(),
-                SizedBox(height: 20.h),
-                MedicalServices(medicalServices: medicalServices),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChatScreen(),
+                      ),
+                    );
+                  },
+                  child: const CustomTextBox(),
+                ),
                 SizedBox(height: 20.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,11 +58,6 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       AppText.topDoctors,
                       style: Theme.of(context).textTheme.displaySmall,
-                    ),
-                    Text(
-                      AppText.viewAll,
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: AppColors.blue, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
