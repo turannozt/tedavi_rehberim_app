@@ -3,8 +3,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'homescreen.dart';
-
+import 'constants/constants.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp()
@@ -20,6 +20,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeScreen(),);
+    return ScreenUtilInit(
+      designSize: const Size(411, 823),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (child, context) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Tedavi Rehberim',
+        //theme: AppTheme.appTheme,
+        home: const HomeScreen(),
+      ),
+    );
   }
 }
