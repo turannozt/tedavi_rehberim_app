@@ -64,7 +64,7 @@ class _ChatScreenState extends State<ChatScreen> {
     // TODO: implement initState
     super.initState();
     sendMessage(
-      'Merhaba Ben Geldim! Ben Bir Hastaım Bana Doktor  Gibi Davran! ',
+      'Merhaba Ben Geldim! Ben Bir Hastayım Bana Doktor  Gibi Davran! ',
     );
   }
 
