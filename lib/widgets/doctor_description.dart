@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tedavi_rehberim/chatgpt/chatgpt.dart';
-import 'package:tedavi_rehberim/model/model.dart';
+
 
 import '../constants/colors.dart';
 import '../constants/images.dart';
 import '../constants/text.dart';
+import '../model/model.dart';
 import 'doctor_details.dart';
 
 class DoctorDescription extends StatelessWidget {
